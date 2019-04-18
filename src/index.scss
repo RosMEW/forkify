@@ -1,3 +1,5 @@
+@import './style/color.scss';
+
 *,
 *::after,
 *::before {
@@ -9,10 +11,21 @@
 html {
     font-size: 62.5%; // 10px / 16px = 62.5% => 1rem = 10px
     box-sizing: border-box;
+
+    @media only screen and (max-width: 68.75em) {
+        font-size: 50%;
+    }
 }
 
 body {
+    background-image: $color-linear-gradient;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 2 * 4vw);
+
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
     line-height: 1.6;
+    color: $color-font-primary;
+
 }

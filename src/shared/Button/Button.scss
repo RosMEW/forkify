@@ -1,0 +1,38 @@
+@import '../../style/color.scss';
+@import '../../style/mixin.scss';
+
+.btn {
+    background-image: $color-linear-gradient;
+    border: none;
+    border-radius: 10rem;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+
+    @include flexRow();
+
+    transition: all .2s;
+
+    &__search {
+        padding: 1.3rem 3rem;
+        font-size: 1.4rem;
+    }
+
+    &__search:hover {
+        transform: scale(1.05);
+    }
+
+    &__search:focus {
+        outline: none;
+    }
+
+    &__search>*:first-child {
+        margin-right: 1rem;
+    }
+}
+
+.btn svg {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: currentColor;
+}

@@ -1,0 +1,9 @@
+@import '../../style/color.scss';
+
+.icon {
+    &__likes {
+        height: 3.75rem;
+        width: 3.75rem;
+        fill: $color-orange-light;
+    }
+}

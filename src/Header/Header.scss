@@ -1,3 +1,59 @@
+@import '../style/color.scss';
+@import '../style/mixin.scss';
+
 .Header {
     grid-area: header;
+    background-color: $color-background-grey-1;
+    @include flexRow(space-between);
+
+    &__logo {
+        height: 4.5rem;
+        display: block;
+        margin-left: 4rem;
+    }
+
+    .search {
+        background-color: #fff;
+        border-radius: 10rem;
+        @include flexRow();
+        padding-left: 3rem;
+        transition: all .3s;
+
+        &__field {
+            border: none;
+            font-family: inherit;
+            font-size: 1.7rem;
+            width: 30rem;
+        }
+
+        &__field:focus {
+            outline: none;
+        }
+
+        &__field::placeholder {
+            color: $color-background-grey-3;
+        }
+    }
+
+    .search:focus-within {
+        transform: translateY(-2px);
+        box-shadow: 0 0.7rem 3rem rgba($color-boxShadow-grey, 0.08);
+    }
+
+    .likes {
+        align-self: stretch;
+        padding: 0 !important;
+
+        &__field {
+            cursor: pointer;
+            padding: 0 4rem;
+            @include flexRow();
+            height: 100%;
+            transition: all .3s;
+        }
+
+        &__field:hover {
+            background-color: $color-background-grey-2;
+        }
+    }
 }
